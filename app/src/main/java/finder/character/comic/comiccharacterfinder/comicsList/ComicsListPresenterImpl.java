@@ -33,7 +33,7 @@ public class ComicsListPresenterImpl implements ComicsListPresenter,
     public void onItemClicked(int position) {
         if (comicsListView != null) {
             long comicId = DataRepository.comicsList.get(position).getId();
-            //comicsListView.showComicsDetail(gnomeId);
+            comicsListView.showComicDetail(comicId);
         }
     }
 

@@ -2,6 +2,8 @@ package finder.character.comic.comiccharacterfinder.comicsList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import finder.character.comic.comiccharacterfinder.R;
+import finder.character.comic.comiccharacterfinder.comicDetail.ComicDetailFragment;
 import finder.character.comic.comiccharacterfinder.data.model.ComicModel;
 
 /**
@@ -80,7 +83,7 @@ public class ComicsListFragment extends Fragment implements ComicsListView,
 
     @Override
     public void showComicDetail(long gnomeId) {
-        /*FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         ComicDetailFragment comicDetailFragment = new ComicDetailFragment();
         Bundle bundle = new Bundle();
@@ -88,7 +91,7 @@ public class ComicsListFragment extends Fragment implements ComicsListView,
         comicDetailFragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.container, comicDetailFragment);
         fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();*/
+        fragmentTransaction.commit();
     }
 
     @Override
