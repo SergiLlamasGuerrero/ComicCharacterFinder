@@ -19,10 +19,14 @@ public class ComicModel implements Parcelable {
     @SerializedName("thumbnail")
     public ComicThumbnailModel thumbnail;
 
-    public ComicModel(long id, String title, ComicThumbnailModel thumbnail) {
+    @SerializedName("description")
+    public String description;
+
+    public ComicModel(long id, String title, ComicThumbnailModel thumbnail, String description) {
         this.id = id;
         this.title = title;
         this.thumbnail = thumbnail;
+        this.description = description;
     }
 
     public long getId() {
@@ -49,11 +53,20 @@ public class ComicModel implements Parcelable {
         this.thumbnail = thumbnail;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     protected ComicModel(Parcel in) {
         id = in.readLong();
         title = in.readString();
         thumbnail = (ComicThumbnailModel) in.readValue(ComicThumbnailModel.class.getClassLoader());
+        description = in.readString();
     }
 
     @Override
@@ -66,6 +79,7 @@ public class ComicModel implements Parcelable {
         dest.writeLong(id);
         dest.writeString(title);
         dest.writeValue(thumbnail);
+        dest.writeString(description);
     }
 
     @SuppressWarnings("unused")

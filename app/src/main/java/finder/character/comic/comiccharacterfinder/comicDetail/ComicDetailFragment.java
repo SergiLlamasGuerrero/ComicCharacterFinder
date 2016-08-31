@@ -35,6 +35,8 @@ public class ComicDetailFragment extends Fragment implements ComicDetailView {
     ImageView comicImageView;
     @BindView(R.id.comic_title)
     TextView comicTitleTextView;
+    @BindView(R.id.comic_description_text_view)
+    TextView comicDescription;
 
     private ComicDetailPresenter presenter;
     private Unbinder unbinder;
@@ -92,6 +94,7 @@ public class ComicDetailFragment extends Fragment implements ComicDetailView {
         Picasso.with(getActivity()).load(comic.getThumbnail().getCompleteThumbnailPath())
                 .into(comicImageView);
         comicTitleTextView.setText(comic.getTitle());
+        comicDescription.setText(comic.getDescription());
     }
 
     private void closeCurrentFragment() {
