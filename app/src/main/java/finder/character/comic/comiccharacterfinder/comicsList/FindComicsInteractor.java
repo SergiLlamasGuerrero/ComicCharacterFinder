@@ -13,6 +13,6 @@ public interface FindComicsInteractor {
         void onFinished(List<ComicModel> comics);
     }
 
-    void findComics(OnFinishedListener listener);
+    void findComics(OnFinishedListener listener, String characterId);
 
 }

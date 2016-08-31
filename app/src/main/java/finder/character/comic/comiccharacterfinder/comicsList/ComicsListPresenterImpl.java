@@ -12,6 +12,8 @@ import finder.character.comic.comiccharacterfinder.data.model.ComicModel;
 public class ComicsListPresenterImpl implements ComicsListPresenter,
         FindComicsInteractor.OnFinishedListener {
 
+    private static final String CAPTAIN_AMERICA_ID = "1009220";
+
     private ComicsListView comicsListView;
     private FindComicsInteractor findComicsInteractor;
 
@@ -26,7 +28,7 @@ public class ComicsListPresenterImpl implements ComicsListPresenter,
             comicsListView.showProgress();
         }
 
-        findComicsInteractor.findComics(this);
+        findComicsInteractor.findComics(this, CAPTAIN_AMERICA_ID);
     }
 
     @Override
