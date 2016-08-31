@@ -21,7 +21,7 @@ public class ComicsListPresenterImpl implements ComicsListPresenter,
     }
 
     @Override
-    public void onResume() {
+    public void onCreate() {
         if (comicsListView != null) {
             comicsListView.showProgress();
         }

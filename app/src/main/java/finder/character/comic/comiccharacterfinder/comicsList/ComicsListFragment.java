@@ -42,14 +42,9 @@ public class ComicsListFragment extends Fragment implements ComicsListView,
 
         listView.setOnItemClickListener(this);
         presenter = new ComicsListPresenterImpl(this);
+        presenter.onCreate();
 
         return view;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        presenter.onResume();
     }
 
     @Override

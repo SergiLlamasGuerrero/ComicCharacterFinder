@@ -5,7 +5,7 @@ package finder.character.comic.comiccharacterfinder.comicsList;
  */
 public interface ComicsListPresenter {
 
-    void onResume();
+    void onCreate();
 
     void onItemClicked(int position);
 
