@@ -39,7 +39,8 @@ public class FindComicsInteractorImpl implements FindComicsInteractor, Callback<
         long ts = System.currentTimeMillis();
         Call<CaptainAmericaModel> call = getCaptainAmericaComicsService.getcomicsList(
                 characterId, RetrofitUtil.PUBLIC_KEY, ts,
-                md5Encript(String.valueOf(ts) + RetrofitUtil.PRIVATE_KEY + RetrofitUtil.PUBLIC_KEY)
+                md5Encript(String.valueOf(ts) + RetrofitUtil.PRIVATE_KEY + RetrofitUtil.PUBLIC_KEY),
+                0
         );
         call.enqueue(this);
     }

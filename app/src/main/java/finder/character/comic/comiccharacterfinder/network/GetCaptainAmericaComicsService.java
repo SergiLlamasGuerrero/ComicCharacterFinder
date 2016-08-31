@@ -13,7 +13,9 @@ public interface GetCaptainAmericaComicsService {
 
     @GET("/v1/public/characters/{characterId}/comics")
     Call<CaptainAmericaModel> getcomicsList(@Path("characterId") String usecharacterId,
-                                            @Query("apikey") String apikey, @Query("ts") long ts,
-                                            @Query("hash") String hash);
+                                            @Query("apikey") String apikey,
+                                            @Query("ts") long ts,
+                                            @Query("hash") String hash,
+                                            @Query("offset") int offset);
 
 }
