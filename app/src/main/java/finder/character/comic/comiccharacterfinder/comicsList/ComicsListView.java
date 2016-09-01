@@ -13,8 +13,8 @@ public interface ComicsListView {
 
     void hideProgress();
 
-    void setComics(List<ComicModel> gnomes);
+    void setComics(List<ComicModel> comics);
 
-    void showComicDetail(long gnomeId);
+    void showComicDetail(long comicId);
 
 }

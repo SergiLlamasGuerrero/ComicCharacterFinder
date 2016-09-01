@@ -24,8 +24,8 @@ import finder.character.comic.comiccharacterfinder.data.model.ComicModel;
  */
 public class ComicDetailFragment extends Fragment implements ComicDetailView {
 
-    public final static String GNOME_ID_KEY = "GnomeId Key";
-    private final static long GNOME_ID_ERROR_CODE = -1;
+    public final static String COMIC_ID_KEY = "ComicId Key";
+    private final static long COMIC_ID_ERROR_CODE = -1;
 
     @BindView(R.id.progress)
     ProgressBar progressBar;
@@ -47,17 +47,17 @@ public class ComicDetailFragment extends Fragment implements ComicDetailView {
         View view = inflater.inflate(R.layout.fragment_comic_detail, container, false);
         unbinder = ButterKnife.bind(this, view);
 
-        presenter = new ComicDetailPresenterImpl(this, getGonmeId());
+        presenter = new ComicDetailPresenterImpl(this, getComicId());
 
         return view;
     }
 
-    private long getGonmeId() {
+    private long getComicId() {
         Bundle args = this.getArguments();
-        if (args == null || args.getLong(GNOME_ID_KEY) < 0)
-            return GNOME_ID_ERROR_CODE;
+        if (args == null || args.getLong(COMIC_ID_KEY) < 0)
+            return COMIC_ID_ERROR_CODE;
         else
-            return args.getLong(GNOME_ID_KEY);
+            return args.getLong(COMIC_ID_KEY);
     }
 
     @Override
