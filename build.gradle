@@ -6,7 +6,7 @@ ext {
             minSdk           : 10,
             targetSdk        : 24,
             version_code     : 1,
-            version_name     : "0.5"
+            version_name     : "0.51"
     ]
 
     libraries = [
