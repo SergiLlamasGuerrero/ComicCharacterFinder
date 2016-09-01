@@ -77,12 +77,12 @@ public class ComicsListFragment extends Fragment implements ComicsListView,
     }
 
     @Override
-    public void showComicDetail(long gnomeId) {
+    public void showComicDetail(long comicId) {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         ComicDetailFragment comicDetailFragment = new ComicDetailFragment();
         Bundle bundle = new Bundle();
-        bundle.putLong(ComicDetailFragment.GNOME_ID_KEY, gnomeId);
+        bundle.putLong(ComicDetailFragment.COMIC_ID_KEY, comicId);
         comicDetailFragment.setArguments(bundle);
         fragmentTransaction.replace(R.id.container, comicDetailFragment);
         fragmentTransaction.addToBackStack(null);

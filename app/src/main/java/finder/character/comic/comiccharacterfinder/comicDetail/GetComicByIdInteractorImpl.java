@@ -9,12 +9,12 @@ import finder.character.comic.comiccharacterfinder.data.model.ComicModel;
 public class GetComicByIdInteractorImpl implements GetComicByIdInteractor {
 
     @Override
-    public void getComicById(long gnomeId, OnFinishedListener listener) {
-        ComicModel foundGnome;
-        for (ComicModel gnome : DataRepository.comicsList) {
-            if (gnome.getId() == gnomeId) {
-                foundGnome = gnome;
-                listener.onFinished(foundGnome);
+    public void getComicById(long comicId, OnFinishedListener listener) {
+        ComicModel foundComic;
+        for (ComicModel comic : DataRepository.comicsList) {
+            if (comic.getId() == comicId) {
+                foundComic = comic;
+                listener.onFinished(foundComic);
                 break;
             }
         }

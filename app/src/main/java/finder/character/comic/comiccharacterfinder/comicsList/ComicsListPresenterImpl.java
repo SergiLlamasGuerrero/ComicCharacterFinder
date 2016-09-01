@@ -45,9 +45,9 @@ public class ComicsListPresenterImpl implements ComicsListPresenter,
     }
 
     @Override
-    public void onFinished(List<ComicModel> gnomes) {
+    public void onFinished(List<ComicModel> comics) {
         if (comicsListView != null) {
-            comicsListView.setComics(gnomes);
+            comicsListView.setComics(comics);
             comicsListView.hideProgress();
         }
     }
