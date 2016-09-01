@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ComicCharacterFinder</string>
+    <string name="comic_not_available">Oops! Sorry, something was wrong finding this comic.</string>
+    <string name="comic_description_title">Description:</string>
 </resources>
